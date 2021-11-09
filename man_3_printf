@@ -14,6 +14,11 @@
 The custom function \fB_printf()\fR writes output to the standard output 
 according to \fBformat\fR.
 
+.SH RETURN VALUE
+Upon successful, \fB_printf()\R returns the number of characters printed, excluding the terminating null character.
+
+If an output error is encountered, -1 is returned.
+
 .SH SEE ALSO
 
 printf(3)
@@ -22,8 +27,7 @@ printf(3)
 function, which is part of the C standard library.
 
 .SH BUGS
-No known bugs.
+No reported bugs as of today.
 
 .SH AUTHORS
-
-A, B and C
+Silvia Natalia Heredia López, Katia Corona Tarango, César Ogir Guzmán López.
