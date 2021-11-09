@@ -2,7 +2,7 @@
 
 # _printf
 
-Emulates the `printf` function (standard library), and the project is part of the [Holberton School] (https://www.holbertonschool.com/) program.
+Emulates the `printf` function (standard library), and the project is part of the [Holberton School](https://www.holbertonschool.com/) program.
 
 ## Description
 

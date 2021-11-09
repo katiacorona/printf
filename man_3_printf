@@ -1,0 +1,29 @@
+.TH _printf 3 "November 2021" "Holberton School 0x010 - C" "_printf man page"
+
+.SH NAME
+
+.B _printf \- print formatted data
+
+.SH SYNOPSIS
+
+.B #include \fB"main.h"\fR
+
+.B int _printf(const char *format, ...)
+
+.SH DESCRIPTION
+The custom function \fB_printf()\fR writes output to the standard output 
+according to \fBformat\fR.
+
+.SH SEE ALSO
+
+printf(3)
+
+\fB_printf()\fR function reproduces the functionality of the \fBprintf()\fR 
+function, which is part of the C standard library.
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHORS
+
+A, B and C
