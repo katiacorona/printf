@@ -15,7 +15,7 @@ The custom function \fB_printf()\fR writes output to the standard output
 according to \fBformat\fR.
 
 .SH RETURN VALUE
-Upon successful, \fB_printf()\R returns the number of characters printed, excluding the terminating null character.
+Upon successful, \fB_printf()\fR returns the number of characters printed, excluding the terminating null character.
 
 If an output error is encountered, -1 is returned.
 
