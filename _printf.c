@@ -5,11 +5,11 @@
  * @format: a pointer to a string to print
  * Return: the number of characters printed
  */
-int _printf(const char *format, ...)
+int _printf(const char *format, ...) /** betty-style error por funcion
+				      * con mas de 40 lineas. Reducir.
+				      */
 {
-	int posicion;
-	int conteo_letras = 0;
-	int conteo_args = 0;
+	int posicion, conteo_letras = 0, conteo_args = 0;
 	va_list opcionales_args;
 
 	if (format == NULL)
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			switch(format[posicion + 1])
+			switch (format[posicion + 1])
 			{
 				case 'c':
 					_putchar(va_arg(opcionales_args, int));
