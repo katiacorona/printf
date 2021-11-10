@@ -23,6 +23,10 @@ int _printf(const char *format, ...)
 			conteo_args++;
 		}
 	}
+	/**
+	 * La siguiente línea manda un warning al compilar por no usar
+	 * last name format en los argumentos, pero el programa compila.
+	 */
 	va_start(opcionales_args, conteo_args);
 	for (posicion = 0; format[posicion] != '\0'; posicion++)
 	{
@@ -38,9 +42,14 @@ int _printf(const char *format, ...)
 				case 'c':
 					_putchar(va_arg(opcionales_args, int));
 					break;
-				// case 's':
-					// Función para imprimir strings
-					//break;
+				/**
+				 * case 's':
+				 * Función para imprimir strings en en un .c
+				 * file a parte.
+				 * Funciones para c y % conversion specifiers
+				 * puede crearse también aunque sean sólo una
+				 * línea.
+				 */
 				case '%':
 					_putchar('%');
 					break;
