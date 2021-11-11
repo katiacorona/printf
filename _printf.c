@@ -42,7 +42,8 @@ int _printf(const char *format, ...) /** betty-style error por funcion
 				case 'c':
 					_putchar(va_arg(opcionales_args, int));
 					break;
-				/**case 's':
+				/**
+				 * case 's':
 				 * while ()
 				 * break;
 				 */
