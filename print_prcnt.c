@@ -9,6 +9,6 @@
 
 int print_prcnt(va_list args __attribute__((unused)))
 {
-	return (_putchar('%'));
+return (_putchar('%'));
 }
 
