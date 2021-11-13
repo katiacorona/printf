@@ -11,8 +11,8 @@
  */
 typedef struct print_func
 {
-	char specifier;
-	int (*f)(va_list);
+char specifier;
+int (*f)(va_list);
 } t_print_func;
 
 int _printf(const char *format, ...);
