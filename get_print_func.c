@@ -8,19 +8,19 @@
  */
 int (*get_print_func(char c))(va_list)
 {
-	t_print_func specs[] = {
-		{'c', print_c},
-		{'s', print_s},
-		{'%', print_prcnt}
+t_print_func specs[] = {
+{'c', print_c},
+{'s', print_s},
+{'%', print_prcnt}
 		
-	};
-	unsigned int i = 0;
+};
+unsigned int i = 0;
 
-	while (specs[i].specifier)
-	{
-		if (specs[i].specifier == c)
-			return (specs[i].f);
-		i++;
-	}
-	return (NULL);
+while (specs[i].specifier)
+{
+if (specs[i].specifier == c)
+return (specs[i].f);
+i++;
+}
+return (NULL);
 }
