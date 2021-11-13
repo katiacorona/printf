@@ -11,8 +11,8 @@
 .B int _printf(const char *format, ...)
 
 .SH DESCRIPTION
-The custom function \fB_printf()\fR writes output to the standard output 
-according to \fBformat\fR.
+The custom function \fB_printf()\fR writes output to the standard output
+according to \fBformat\fR
 
 .SH RETURN VALUE
 Upon successful, \fB_printf()\fR returns the number of characters printed, excluding the terminating null character.
@@ -23,7 +23,7 @@ If an output error is encountered, -1 is returned.
 
 printf(3)
 
-\fB_printf()\fR function reproduces the functionality of the \fBprintf()\fR 
+\fB_printf()\fR function reproduces the functionality of the \fBprintf()\fR
 function, which is part of the C standard library.
 
 .SH BUGS
