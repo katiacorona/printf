@@ -9,41 +9,41 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list arguments;
-	int (*print_func)(va_list);
-	int charCount, lastVal;
+va_list arguments;
+int (*print_func)(va_list);
+int charCount, lastVal;
 
-	if (!format)
-		return (-1);
+if (!format)
+return (-1);
 
-	va_start(arguments, format);
-	for (charCount = 0; *format; ++format)
-	{
-		if (*format == '%')
-		{
-			if (!format[1])
-				return (-1);
+va_start(arguments, format);
+for (charCount = 0; *format; ++format)
+{
+if (*format == '%')
+{
+if (!format[1])
+return (-1);
 
-			print_func = get_print_func(format[1]);
-			if (print_func)
-			{
-				lastVal = print_func(arguments);
-				if (lastVal < 0)
-					return (-1);
-				charCount += lastVal;
-				++format;
-				continue;
-			}
-			lastVal = _putchar(*format++);
-			if (lastVal < 0)
-				return (-1);
-			charCount += lastVal;
-		}
-		lastVal = _putchar(*format);
-		if (lastVal < 0)
-			return (-1);
-		charCount += lastVal;
-	}
-	va_end(arguments);
-	return (charCount);
+print_func = get_print_func(format[1]);
+if (print_func)
+{
+lastVal = print_func(arguments);
+if (lastVal < 0)
+return (-1);
+charCount += lastVal;
+++format;
+continue;
+}
+lastVal = _putchar(*format++);
+if (lastVal < 0)
+return (-1);
+charCount += lastVal;
+}
+lastVal = _putchar(*format);
+if (lastVal < 0)
+return (-1);
+charCount += lastVal;
+}
+va_end(arguments);
+return (charCount);
 }
