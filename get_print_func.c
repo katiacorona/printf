@@ -12,7 +12,6 @@ t_print_func specs[] = {
 {'c', print_c},
 {'s', print_s},
 {'%', print_prcnt}
-		
 };
 unsigned int i = 0;
 
