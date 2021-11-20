@@ -11,7 +11,9 @@ int (*get_print_func(char c))(va_list)
 t_print_func specs[] = {
 {'c', print_c},
 {'s', print_s},
-{'%', print_prcnt}
+{'%', print_prcnt},
+{'r', print_r},
+{ 0, NULL}
 };
 unsigned int i = 0;
 
