@@ -7,10 +7,10 @@
 */
 void _print_i(int n, int *count)
 {
-int lastRetval;
+int lastRetVal;
 if (n < 0)
 {
-*count _putchar('-');
+*count = _putchar('-');
 if (*count < 0)
 return;
 if (n < -9)
