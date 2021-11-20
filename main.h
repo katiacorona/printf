@@ -25,6 +25,10 @@ int print_s(va_list);
 
 int print_prcnt(va_list);
 
+int print_i(va_list);
+void _print_i(intn, int *count);
+
+
 int print_r(va_list);
 void _print_r(char *s, int *count);
 

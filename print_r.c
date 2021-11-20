@@ -7,7 +7,7 @@
  */
 void _print_r(char *s, int *count)
 {
-if(!(*s))
+if (!(*s))
 return;
 _print_r(s + 1, count);
 *count += _putchar(*s);
@@ -16,7 +16,7 @@ _print_r(s + 1, count);
  * print_r - print a string reverse
  * @args: the va_list with character to print as its next element
  *
- * Retiurn: the number of bytes printed
+ * Return: the number of bytes printed
  */
 int print_r(va_list args)
 {
