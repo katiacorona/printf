@@ -14,6 +14,7 @@ t_print_func specs[] = {
 {'%', print_prcnt},
 {'i', print_i},
 {'d', print_i},
+{'b', print_b},
 {'r', print_r},
 { 0, NULL}
 };
