@@ -11,9 +11,38 @@
 .B int _printf(const char *format, ...)
 
 .SH DESCRIPTION
-The custom function \fB_printf()\fR writes output to the standard output
-according to \fBformat\fR
+.B _printf()
+writes output to the standard output
+according to \fIformat\fR.
+.TP
+.B Format string
 
+May be composed of zero or more directives: if zero, ordinary characters that are not preceded by conversion specifier (%) are directly copied to the output stream unchanged; and conversion specifications that begin with the character %, followed by a conversion specifier. When both cases are present, the printf() function starts by printing each character found in the first argument until it finds a %, and goes to the second argument, then returns to continue printing until it finds another percent and goes to the next argument in line.
+
+\fBprintf("%c %d", name, age);\fR
+.TP
+.B Conversion Specifiers
+
+Characters that specify the type of conversion with which the values will be treated:
+
+.TP
+.BR c
+A type int argument is converted to a type char and written to the standard stream.
+.TP
+.BR s
+A \fIconst char *\fR argument is expected to be a pointer to an array of characters. Characters are written up until a terminating null byte ('\n') is found.
+.TP
+.BR d
+A type int argument is printed in its signed int format.
+.TP
+.BR i
+A type int argument is converted to decimal notation. 
+.TP
+.BR b
+An unsigned int argument is converted to binary.
+.TP
+.BR r
+Prints a reversed string.
 .SH RETURN VALUE
 Upon successful, \fB_printf()\fR returns the number of characters printed, excluding the terminating null character.
 
