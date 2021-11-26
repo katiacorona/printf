@@ -1,4 +1,4 @@
-.TH _printf 3 "November 2021" "Holberton School 0x010 - C" "_printf man page"
+.TH _printf 3 "November 25, 2021" "Holberton School 0x010 - C" "_printf man page"
 
 .SH NAME
 
@@ -12,14 +12,16 @@
 
 .SH DESCRIPTION
 .B _printf()
-writes output to the standard output
-according to \fIformat\fR.
+writes output to the standard output according to \fIformat\fR.
+
 .TP
 .B Format string
 
-May be composed of zero or more directives: if zero, ordinary characters that are not preceded by conversion specifier (%) are directly copied to the output stream unchanged; and conversion specifications that begin with the character %, followed by a conversion specifier. When both cases are present, the printf() function starts by printing each character found in the first argument until it finds a %, and goes to the second argument, then returns to continue printing until it finds another percent and goes to the next argument in line.
+May be composed of zero or more directives: if zero, ordinary characters that are not preceded by conversion specifier (%) are directly copied to the output stream unchanged; and conversion specifications that begin with the character %, followed by a conversion specifier. When both cases are present, the \fB_printf()\fR function starts by printing each character found in the first argument until it finds a %, and goes to the second argument, then returns to continue printing until it finds another percent and goes to the next argument in line.
 
-\fBprintf("%c %d", name, age);\fR
+.ce
+\fB_printf("%c %d", name, age);\fR
+
 .TP
 .B Conversion Specifiers
 
@@ -43,10 +45,31 @@ An unsigned int argument is converted to binary.
 .TP
 .BR r
 Prints a reversed string.
+
 .SH RETURN VALUE
 Upon successful, \fB_printf()\fR returns the number of characters printed, excluding the terminating null character.
 
 If an output error is encountered, -1 is returned.
+
+.SH EXAMPLES
+.TP
+To print user names, were user_name is a pointer to a string:
+
+#include "main.h"
+
+_printf("%s\n", user_name);
+.TP
+To print a reversed string, where str is a pointer to the string to be reversed:
+
+#include "main.h"
+
+_printf("Thanksgiving in reverse: %r", str);
+.TP
+To convert an unsigned int argument into binary:
+
+#include "main.h"
+
+_printf("%b\n", 98);
 
 .SH SEE ALSO
 
